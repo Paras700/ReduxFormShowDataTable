@@ -13,17 +13,15 @@ export const addItem = (values) => {
     let val = localStorage.getItem('user');
     let data = JSON.parse(val);
     let array = [];
-    console.log(data);
     if(data!=null) {
-       data.map(function(v)
-       {
-          array.push(v);
+       data.map(function(v){
+         array.push(v);
        })
      }
-     array.push(values);
-     localStorage.setItem('user', JSON.stringify(array));
-     dispatch(setItemToLocalStorage(values));
-    }
+         array.push(values);
+         localStorage.setItem('user', JSON.stringify(array));
+         dispatch(setItemToLocalStorage(values));
+     }
   }
 //
   export const setItemToLocalStorage = (values) => {
@@ -44,10 +42,10 @@ export const actions = {
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [ADD_ITEM]   : (state = initialState, action) => {
+  [ADD_ITEM]: (state ={}, action) => {
     return {
       ...state,
-      items : action.items
+      items: action.items
     };
   },
 }
@@ -56,7 +54,7 @@ const ACTION_HANDLERS = {
 // Reducer
 // ------------------------------------
 const initialState = {
-  items : []
+  items: []
 };
 
 export default function counterReducer (state = initialState, action) {

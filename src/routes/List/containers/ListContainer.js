@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getData} from '../modules/list'
-import ListComponent from '../components/List'
 
+import {getData} from '../modules/list';
+import ListComponent from '../components/List';
 const mapStateToProps = (state) => {
   return  {
     users : state.list.users

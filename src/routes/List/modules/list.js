@@ -18,8 +18,7 @@ export const setUsersData = (data) => {
 
 export const getData = () => {
   return (dispatch) => {
-    const usersData = JSON.parse(localStorage.getItem('key'));
-    console.log(' usersData  form Reducer ', usersData);
+    const usersData = JSON.parse(localStorage.getItem('user'));
     dispatch(setUsersData(usersData));
   }
 }

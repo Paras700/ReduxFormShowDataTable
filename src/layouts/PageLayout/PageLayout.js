@@ -8,11 +8,9 @@ export const PageLayout = ({ children }) => (
     <h1>Redux Assignment</h1>
     <IndexLink to='/' activeClassName='page-layout__nav-item--active'>Home</IndexLink>
     {' | '}
-    <Link to='/counter' activeClassName='page-layout__nav-item--active'>Counter</Link>
+    <Link to='/student' activeClassName='page-layout__nav-item--active'>Register</Link>
     {' | '}
     <Link to='/list' activeClassName='page-layout__nav-item--active'>List</Link>
-    {' | '}
-    <Link to='/student' activeClassName='page-layout__nav-item--active'>Student</Link>
     <div className='page-layout__viewport'>
       {children}
     </div>
